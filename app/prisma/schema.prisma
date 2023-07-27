@@ -1,0 +1,23 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  // url      = env("DATABASE_URL")
+  url      = "mysql://root:Password123.@localhost:3306/puc_talk?connection_limit=1"
+}
+
+model User {
+  id                  Int     @id @default(autoincrement())
+  email               String  @unique
+  username            String  @unique
+  name                String?
+  aws_cognito_usersub String  @unique
+  is_confirmed        Boolean
+
+  @@map("users")
+}
