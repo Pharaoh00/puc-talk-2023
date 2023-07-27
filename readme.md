@@ -80,6 +80,8 @@ Mas sempre vale a pena dar uma olhada, para a sua distribuição do linux especi
 
 ## Como iniciar o projeto
 
+> Nota importante: Em alguns fluxos a ser seguido o primeiro passo é ***Abra o terminal e navegue na pasta do projeto***, caso o seu terminal já estava aberto na pasta do projeto não há a necessidade de abrir outro terminal, basta continuar com o mesmo.
+
 Com o seu vscode aberto:<br>
 1. Abra o projeto em questão.
 2. Na raiz do projeto, onde está a pasta ***app*** crie o arquivo ***.env***. <br>
@@ -102,6 +104,13 @@ REDIS_PORT=6379
 > A veriavel ***REDIS_IP=127.0.0.1*** não será alterada.<br>
 > A veriavel ***REDIS_PORT=6379*** não será alterada.
 
+Com o seu vscode aberto:<br>
+1. Abra o projeto em questão.
+2. Na raiz do projeto, onde está a pasta ***app*** abra a pasta ***prisma***.
+3. Na pasta *prisma* contém duas coisas, ***migrations***: que são todos os arquivos *.sql* que irão construir e atualizar o nosso banco e o arquivo ***schema.prisma***, abra-o.
+4. Com o arquivo *schema.prisma* aberto, vamos editar a variável ***url*** que é a url necessária para o prisma acessar o nosso banco.<br>
+Onde está ***root:Password123*** é o ***usuário:senha*** que você cadastrou quando configurou o *MySql server*. Basta atualizar com o seu usuário e senha.
+
 Com o openssl instalado e funcionando:<br>
 1. Abra o terminal e navegue na pasta do projeto.
 2. Dentro do projeto vai ter algumas coisas, mas estamos interessados na pasta ***app***, navegue para dentro dela.
@@ -116,3 +125,15 @@ Após tudo estar instalado, configurado e todos os passos acima darem certo:
 2. Dentro do projeto vai ter algumas coisas, mas estamos interessados na pasta ***app***, navegue para dentro dela.
 3. Escreva o comando ***npm install*** ou ***npm i***. Note que o comando so irá funcionar se você estiver dentro da pasta *app* e o arquivo ***package.json*** estiver presente. O *npm* irá instalar todos os packages que estão listados no *package.json* sem precisar instala-lo manualmente um por um.
 4. Caso tudo dê certo e todos os packes foram instalado, pode-se iniciar o server, para isso basta escrever o comando ***npm start*** e aparecerá uma mensagem do servidor inicializando.
+
+Com todos os packages instalado com sucesso, MySql instalado e o arquivo ***schema.prisma*** com o seu usuário e senha, vamos inicializar o nosso banco de dados:
+1. Abra o terminal e navegue na pasta do projeto.
+2. Dentro do projeto vai ter algumas coisas, mas estamos interessados na pasta ***app***, navegue para dentro dela.
+3. Escreva o comando ***npx prisma migrate dev***.<br>
+Dessa forma o prisma irá construir o banco de dados com as informações que estão no *schema.prisma*.
+
+Com todos os passo seguidos e sucesso:
+1. Abra o terminal e navegue na pasta do projeto.
+2. Dentro do projeto vai ter algumas coisas, mas estamos interessados na pasta ***app***, navegue para dentro dela.
+3. Escreva o comando ***npm start**.<br>
+Esse comando é responsável por iniciar o servidor e carregar a nossa aplicação.
