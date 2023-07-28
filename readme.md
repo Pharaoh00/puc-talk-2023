@@ -32,8 +32,8 @@ Se você não tem as ferramentas acima instalada, precisará instalar todas ou a
 - *Vale a pena enfatizar que o Cognito é um serviço da Amazon, por isso não precisa de ser instalado.*<br>
 *Mas é necessário uma conta na [AWS](https://aws.amazon.com/free) e um cartão de crédito valido. O cartão somente será creditado se houver alguma despesa na aws, no estilo "self-service".*<br>
 *A maioria dos serviços contêm um período (de tempo e uso) que não é cobrado.*
-- *Os downloads do linux estão para o Ubuntu 22.04. Tecnicamente não existe nenhum diferença entre as versões do ubuntu ou qualquer outro distro do linux. Muitos desses downloads são feitos via apt-get, se existe essa ferramente no seu linux é bem provável que você consiga seguir os tutoriais sem problema algum.<br>
-Mas sempre vale a pena dar uma olhada, para a sua distribuição do linux especifica e versão.*
+- *Os downloads do linux estão para o Ubuntu 22.04. Tecnicamente não existe nenhuma diferença entre as versões do ubuntu ou qualquer outro distro do linux. Muitos desses downloads são feitos via apt-get, se existe essa ferramente no seu linux é bem provável que você consiga seguir os tutoriais sem problema algum.<br>
+Mas sempre vale a pena dar uma olhada, para a sua distribuição do linux específica e versão.*
 - *Em relação ao Windows, todas as ferramentas podem ser instaladas via .exe.*<br>
 *Alguns processos requerem alguns conhecimentos diversos, como por exemplo inserir variáveis de ambiente.*
 
@@ -45,7 +45,7 @@ Mas sempre vale a pena dar uma olhada, para a sua distribuição do linux especi
 > Recomento esse tutorial para a instalação do NVM.<br><br>
 > [Download Nodejs - Windows](https://nodejs.org/en)<br>
 > Caso queira somente instalar o Node, baixe diretamente pelo site deles.<br><br>
-> ***Sempre recomendo a utilizando da versão LTS (Long-term support) que significa "Suporte a longo prazo". Sendo assim pode-se garantir que será uma versão estável.***
+> ***Sempre recomendo a utilização da versão LTS (Long-term support) que significa "Suporte a longo prazo". Sendo assim pode-se garantir que será uma versão estável.***
 
 > ### Mysql
 > [Download MySql - Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04)<br>
@@ -80,7 +80,7 @@ Mas sempre vale a pena dar uma olhada, para a sua distribuição do linux especi
 
 ## Como iniciar o projeto
 
-> Nota importante: Em alguns fluxos a ser seguido o primeiro passo é ***Abra o terminal e navegue na pasta do projeto***, caso o seu terminal já estava aberto na pasta do projeto não há a necessidade de abrir outro terminal, basta continuar com o mesmo.
+> Nota importante: Em alguns fluxos a ser seguido o primeiro passo é ***Abra o terminal e navegue na pasta do projeto***, caso o seu terminal já esteja aberto na pasta do projeto não há a necessidade de abrir outro terminal, basta continuar com o mesmo.
 
 Com o seu vscode aberto:<br>
 1. Abra o projeto em questão.
@@ -124,7 +124,8 @@ Após tudo estar instalado, configurado e todos os passos acima darem certo:
 1. Abra o terminal e navegue na pasta do projeto.
 2. Dentro do projeto vai ter algumas coisas, mas estamos interessados na pasta ***app***, navegue para dentro dela.
 3. Escreva o comando ***npm install*** ou ***npm i***. Note que o comando so irá funcionar se você estiver dentro da pasta *app* e o arquivo ***package.json*** estiver presente. O *npm* irá instalar todos os packages que estão listados no *package.json* sem precisar instala-lo manualmente um por um.
-4. Caso tudo dê certo e todos os packes foram instalado, pode-se iniciar o server, para isso basta escrever o comando ***npm start*** e aparecerá uma mensagem do servidor inicializando.
+4. Caso tudo dê certo e todos os packes foram instalado, pode-se iniciar o server, para isso basta escrever o comando ***npm start*** e aparecerá uma mensagem do servidor inicializando.<br>
+*Nesse momento a aplicação não irá funcionar ainda, pois temos que configurar mais algumas coisas. Mas se nesse momento a aplicação iniciar ou com qualquer erro que não seja em relação aos packages instalados, tudo está corrento certo até agora.*
 
 Com todos os packages instalado com sucesso, MySql instalado e o arquivo ***schema.prisma*** com o seu usuário e senha, vamos inicializar o nosso banco de dados:
 1. Abra o terminal e navegue na pasta do projeto.
@@ -135,5 +136,40 @@ Dessa forma o prisma irá construir o banco de dados com as informações que es
 Com todos os passo seguidos e sucesso:
 1. Abra o terminal e navegue na pasta do projeto.
 2. Dentro do projeto vai ter algumas coisas, mas estamos interessados na pasta ***app***, navegue para dentro dela.
-3. Escreva o comando ***npm start**.<br>
+3. Escreva o comando ***npm start***.<br>
 Esse comando é responsável por iniciar o servidor e carregar a nossa aplicação.
+
+## Para casa
+
+- [NodeJS Architecture - I/O](https://www.youtube.com/watch?v=DaU1-XoANig)<br>
+Vídeo do Hussein Nasser, arquiteto de software, explicando sobre o Node e como o mesmo funciona internamente.
+- [NodeJS Architecture - I/O](https://medium.com/@hnasr/when-nodejs-i-o-blocks-327f8a36fbd4)<br>
+O mesmo assunto do vídeo, mas em forma escrita.
+- [What the heck is the event loop anyway? | Philip Roberts | JSConf EU](https://www.youtube.com/watch?v=8aGhZQkoFbQ)<br>
+Palestra sobre como o Javascript funciona e o que quer dizer "asynchronous".
+- [Single-Threaded and Asynchronous — How Does Node Do It?](https://betterprogramming.pub/single-threaded-and-asynchronous-how-does-node-do-it-d964100766a)<br>
+Artigo explicando sobre asynchronous.
+- [JSON Web Tokens](https://auth0.com/docs/secure/tokens/json-web-tokens)<br>
+Explicação da Okta sobre JWT's.
+- [Authentication as a Microservice](https://www.youtube.com/watch?v=SLc3cTlypwM)<br>
+Palestra muito interessante do Brian Pontarelli sobre JWT e arquitetura.
+- [JSON Web Tokens (JWT) are Dangerous for User Sessions](https://redis.com/blog/json-web-tokens-jwt-are-dangerous-for-user-sessions/)<br>
+Artigo muito bom sobre JWT e uma explicação detalhada de como utilizá-los corretamente.
+- [Why JWTs Suck as Session Tokens](https://developer.okta.com/blog/2017/08/17/why-jwts-suck-as-session-tokens)<br>
+Artigo explicando sobre pros e contras do JWT.
+- [Cloud Compararions Cheat Sheet](https://media.licdn.com/dms/image/D4E22AQHj5Br5RDAAyg/feedshare-shrink_1280/0/1690299923621?e=1693440000&v=beta&t=kTiodoHryO297i1wU2D8o5JeQm0GGnhVG-fyVnIMEus)<br>
+Imagem comparando serviços da nuvem entre empresas.
+- [Software Architecture Styles](https://media.licdn.com/dms/image/D4E22AQGPaIirItzZSQ/feedshare-shrink_1280/0/1689055151627?e=1692230400&v=beta&t=mz3LDoR-MSh9xIzeDavDP0JM8NrKKdkQ1Ua1Ri41Gyg)<br>
+Imagem muito boa mostrando os diferentes estilos de arquitetura e o que é necessário para cada uma.
+- [How to choose Database](https://media.licdn.com/dms/image/D4D22AQGNwZKp1P1qvw/feedshare-shrink_1280/0/1688588608093?e=1691625600&v=beta&t=A0tp0mT25_EXL8vw96OOVVqlDAkinhh_l10PUwc6Xgs)<br>
+Imagem mostrando as diferentes aplicações para cada tipo de banco de dados.
+- [20 API Security Tips](https://media.licdn.com/dms/image/D4E22AQESCPOXT-u6_g/feedshare-shrink_1280/0/1689898488561?e=1692835200&v=beta&t=3vDbhZiAc2S8nDR9GqfxKkzRe_jEI1oxUq53_zqFfH4)<br>
+Imagem mostrando boas práticas de segurança na sua aplicação.
+- [Explore the world of cyber security](https://owasp.org/)<br>
+Organização de segurança na web.
+- [What is Backend Development?](https://www.simplilearn.com/tutorials/programming-tutorial/what-is-backend-development)<br>
+Artigo explicando a atuação de um Back-end.  
+- [What is a DevOps engineer?](https://www.atlassian.com/devops/what-is-devops/devops-engineer)<br>
+Artigo explicando a atuação de um DevOps.
+- [What’s the Difference? Relational vs Non-Relational Databases](https://insightsoftware.com/blog/whats-the-difference-relational-vs-non-relational-databases/)<br>
+Artigo falando sobre as diferenças entre banco de dados, e suas arquiteturas, e como escolher a melhor para o seu projeto.
